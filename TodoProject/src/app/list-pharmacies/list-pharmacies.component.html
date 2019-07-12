@@ -1,0 +1,30 @@
+<div class="container">
+<table class="table">
+<thead>
+  <tr>
+    <th>id</th>
+    <th>Pharmacie name</th>
+    <th>Lieu</th>
+    <th>Adresse</th>
+    <th>Phone</th>
+    <th>In service from</th>
+    <th>In service to</th>
+  </tr>
+</thead>
+<tbody>
+<tr *ngFor="let ph of pharmacies">
+  <td>{{ph.id}}</td>
+  <td>{{ph.pharmacieName}}</td>
+  <td>{{ph.lieu}}</td>
+  <td>{{ph.adresse}}</td>
+  <td>{{ph.phone}}</td>
+  <td>{{ph.dateFrom}}</td>
+  <td>{{ph.dateTo}}</td>
+  <td><button class="btn btn-success" (click)='deletePhar(ph.id)'>Delete</button></td>
+  <td><button class="btn btn-success" (click)='updatePharm(ph.id)'>Update</button></td>
+</tr>
+</tbody>
+</table>
+</div>
+<button (click)="getAll()" class="btn btn-success">Get All</button><br><br>
+<button (click)="addPharm()" class="btn btn-success">add</button>

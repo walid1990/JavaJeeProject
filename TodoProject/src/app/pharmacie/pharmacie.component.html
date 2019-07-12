@@ -1,0 +1,9 @@
+<div class="container">
+Pharmacie Name : <input type="text"  name="pharmacieName" [(ngModel)]="pharmacie.pharmacieName"><br>
+Lieu : <input type="text"  name="lieu" [(ngModel)]="pharmacie.lieu"><br>
+Adress : <input type="text" name="adresse" [(ngModel)]="pharmacie.adresse"><br>
+Phone : <input type="text" name="phone" [(ngModel)]="pharmacie.phone"><br>
+Date From : <input type="date" name="dateFrom" [(ngModel)]="pharmacie.dateFrom"><br>
+Date To : <input type="date" name="dateTo" [(ngModel)]="pharmacie.dateTo">
+</div>
+<button class="btn btn-success" (click)="updateList()">Save</button>
